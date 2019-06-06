@@ -40,11 +40,28 @@
 
     {% endblock %}
 
+    {% block javascript %}
+
+      <!-- Bootstrap JS and its dependencies-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <!-- Your stuff: Third-party javascript libraries go here -->
+
+
+      <!-- place project specific Javascript in this file -->
+
+      <script src="{% static 'js/project.js' %}"></script>
+
+
+    {% endblock javascript %}
+
   </head>
 
   <body>
     <!-- login dialog -->
-    {% include 'pages\login.html' %}
+    {% include 'components\login.html' %}
 
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -57,11 +74,11 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-th"></i> Projects</a>
+              <a class="nav-link" href="{% url 'projects' %}"><i class="fa fa-th"></i> Projects</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-briefcase"></i> Solutions</a>
+              <a class="nav-link" href="{% url 'solutions' %}"><i class="fa fa-briefcase"></i> Solutions</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -69,9 +86,9 @@
                 <i class="fa fa-users"></i> Who we are
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-user-friends"></i> Our Staff</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-phone"></i> Contact Us</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-certificate"></i> ALWAHAJ In Brief</a>
+                <a class="dropdown-item" href="{% url 'staff' %}"><i class="fa fa-user-friends"></i> Our Staff</a>
+                <a class="dropdown-item" href="{% url 'contactUs' %}"><i class="fa fa-phone"></i> Contact Us</a>
+                <a class="dropdown-item" href="{% url 'overview' %}"><i class="fa fa-certificate"></i> ALWAHAJ In Brief</a>
                 <a class="dropdown-item" href="#"><i class="fa fa-medal"></i> certificates</a>
               </div>
             </li>
@@ -98,17 +115,17 @@
                 <i class="fa fa-cog"></i> settings
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-industry"></i> Company</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-th-large"></i> Projects</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-box-open"></i> Systems</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-user"></i> Staff</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-link"></i> Link System</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-link"></i> Link Staff</a>
-                <a class="dropdown-item" href="{% url 'home' %}"><i class="fa fa-user-secret"></i> Admin</a>
+                <a class="dropdown-item" href="{% url 'addCompany' %}"><i class="fa fa-industry"></i> Company</a>
+                <a class="dropdown-item" href="{% url 'addProject' %}"><i class="fa fa-th-large"></i> Projects</a>
+                <a class="dropdown-item" href="{% url 'addSystem' %}"><i class="fa fa-box-open"></i> Systems</a>
+                <a class="dropdown-item" href="{% url 'addStaff' %}"><i class="fa fa-user"></i> Staff</a>
+                <a class="dropdown-item" href="{% url 'linkSystem' %}"><i class="fa fa-link"></i> Link System</a>
+                <a class="dropdown-item" href="{% url 'linkStaff' %}"><i class="fa fa-link"></i> Link Staff</a>
+                <a class="dropdown-item" href="{% url 'admin:index' %}"><i class="fa fa-user-secret"></i> Admin</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-sign-out-alt"></i> Sign out</a>
+              <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i> Sign out</a>
             </li>
           {% else %}
             <li class="nav-item">
@@ -121,7 +138,7 @@
 
     </div>
 
-    <div class="container">
+    <div id="wrapper" class="content">
 
       {% if messages %}
           {% for message in messages %}
@@ -129,33 +146,31 @@
           {% endfor %}
       {% endif %}
 
-      {% block content %}
-        <p>@zxc</p>
-      {% endblock content %}
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+            <div class="col-sm-12">
 
-    </div> <!-- /container -->
+              {% block content %}
+                
+              {% endblock content %}
+            </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- footer  -->
+    {% include 'components\footer.html' %}
 
     {% block modal %}{% endblock modal %}
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
 
-      <!-- Bootstrap JS and its dependencies-->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-
-
-      <!-- place project specific Javascript in this file -->
-
-      <script src="{% static 'js/project.js' %}"></script>
-
-
-    {% endblock javascript %}
   </body>
 </html>
 

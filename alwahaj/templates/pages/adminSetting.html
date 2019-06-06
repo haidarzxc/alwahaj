@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+
+{% include 'components\editModal.html' %}
+
+<div class=row>
+  <div class="col-sm-3">
+
+
+    <h3>{{section}}</h3>
+    <hr />
+    <!-- form -->
+    <form method="POST" id="adminForm" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% include 'components\form.html' with form=form %}
+      {% include 'components\formset.html' %}
+      <button type="submit" class="btn btn-primary" id="submitFormBtn">Submit</button>
+    </form>
+    <!-- form -->
+
+<script type="text/javascript">
+
+    function showPopover(loc){
+      $(loc).popover('show');
+      setTimeout(function() {$(loc).popover('hide')},1400);
+    }//end of showPopover
+    function attachPopover(loc,cont,tit){
+      $(loc).popover({
+            content: cont,
+            title:tit,
+            trigger: 'manual'
+        })
+    }//end of numberPopover
+
+
+    function submit(array){
+      let indexObj={'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    'model':"{{ request.path }}",
+                    'row[]':array};
+
+      $.ajax({
+        type: "POST",
+        url: "{% url 'delete' %}",
+        data: indexObj,
+        success: function(data){
+                  location.reload();
+
+        },
+        failure: function(errMsg) {
+            alert(errMsg);
+        }
+      });
+    }//end of submit
+
+    function iterateTable(){
+      let indexArray=[]
+      $('.adminTblBody .fa-check-square').each(function(){
+        indexArray.push($(this).attr('id').split("-")[1]);
+      });
+      return indexArray;
+    }//end of iterateTable
+
+
+    function startModal(id){
+      $.ajax({
+        type: "POST",
+        url: "{% url 'update' %}",
+        data: {'csrfmiddlewaretoken': '{{ csrf_token }}',
+                'model':'{{ request.path }}',
+                            'id':id
+        },
+        success: function(data){
+                  console.log("sent");
+                  $('#editForm').remove();
+                  $("#editModalContent").append($(data).find('#editForm'));
+                  $('#editForm').attr('action', '/update/?key='+id);
+
+        },
+        failure: function(errMsg) {
+            alert(errMsg);
+        }
+      });//end of ajax call
+      $('#editModal').modal();
+
+    }//end of startModal
+
+    // ready method
+    $(document).ready(function(){
+
+      // notification - popover
+      attachPopover("#deleteBtn","select Row(s)","Database Error");
+      attachPopover("#editBtn","edit 1 Row","Database Error");
+
+      // navbar insert button
+      $('#insertBtn').click(function(e){
+        e.preventDefault();
+        $('#submitFormBtn').click();
+      })//end of insertBtn
+
+      // navbar delete button
+      $('#deleteBtn').click(function(e){
+        e.preventDefault();
+        let array=iterateTable();
+        if(array.length>0){
+          submit(array);
+        }
+        else{
+          showPopover("#deleteBtn");
+        }
+      });//end of deleteBtn
+
+      // navbar edit button
+      $('#editBtn').click(function(e){
+        e.preventDefault();
+        let array=iterateTable();
+        if(array.length==1){
+          startModal(array[0]);
+        }
+        else{
+          showPopover("#editBtn");
+        }
+      });//end of editBtn
+
+
+    });//end of ready function
+
+
+</script>
+
+
+  </div>
+  <div class="col-sm-9" id="tableArea">
+    {% include 'components\table.html' %}
+  </div>
+</div>
+
+{% endblock %}

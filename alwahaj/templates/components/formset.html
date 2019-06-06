@@ -1,0 +1,56 @@
+{% load widget_tweaks %}
+
+{{ formset.management_form }}
+{% for form in formset %}
+<div class="row form-row spacer imageRow">
+    <div class="col-10 filePicker">
+      {{form.image}}
+    </div>
+    <div class="col-1 addImageBtn">
+        <div class="input-group">
+
+            <div class="input-group-append">
+                <button class="btn btn-secondary add-form-row">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<script type="text/javascript">
+function cloneRow(selector) {
+    var newElement = $(selector).clone(true);
+    let id=parseInt($(selector).find(':input').attr('name').split("-")[1])+1;
+    let TOTAL_FORMS=parseInt($('#id_form-TOTAL_FORMS').val());
+    $('#id_form-TOTAL_FORMS').val(TOTAL_FORMS+1);
+    // console.log($('#id_form-TOTAL_FORMS').val());
+    newElement.find(':input:first').attr('name',"form-"+id+"-image");
+    newElement.find(':input:first').attr('id',"id_form-"+id+"-image");
+    let button=$(selector).find('.add-form-row');
+    button.removeClass('add-form-row');
+    button.addClass('remove-form-row');
+    button.html("-");
+
+    $(selector).after(newElement);
+    return false;
+}//end of cloneRow
+function deleteRow(btn) {
+    console.log($(btn).closest('.imageRow').attr('class'));
+    $(btn).closest('.imageRow').remove();
+    let TOTAL_FORMS=parseInt($('#id_form-TOTAL_FORMS').val());
+    $('#id_form-TOTAL_FORMS').val(TOTAL_FORMS-1);
+    return false;
+}//end of deleteRow
+$(document).ready(function(){
+  $(document).on('click', '.add-form-row', function(e){
+      e.preventDefault();
+      cloneRow('.form-row:last');
+      return false;
+  });
+  $(document).on('click', '.remove-form-row', function(e){
+      e.preventDefault();
+      deleteRow($(this));
+      return false;
+  });
+});
+</script>
