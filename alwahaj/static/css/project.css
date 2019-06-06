@@ -69,6 +69,8 @@
   color:#256bcc;
 }
 
+/* tableArea Start  */
+
 .adminTblHeader, .adminTblBody, .adminTblRow, .adminTblTd, .adminTblTh {
   display: block;
 }
@@ -93,7 +95,9 @@
     width: 33.33%;
     float: left;
 }
+/* tableArea End  */
 
+/*Footer CSS */
 #fDialogBoxLink{
   cursor: pointer;
 }
@@ -214,6 +218,8 @@ i.sml{
     border-width: 0px;
 }
 
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
 html{
     height: 100%;
 }
@@ -235,3 +241,4 @@ body{
    flex: 0 0 auto;
    -webkit-flex: 0 0 auto;
 }
+/*Footer CSS */
