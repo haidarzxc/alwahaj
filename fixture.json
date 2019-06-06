@@ -1,0 +1,1701 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sites",
+      "model": "site"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "account",
+      "model": "emailaddress"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "account",
+      "model": "emailconfirmation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "socialaccount",
+      "model": "socialaccount"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "socialaccount",
+      "model": "socialapp"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "socialaccount",
+      "model": "socialtoken"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "core",
+      "model": "company"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "core",
+      "model": "projects"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "core",
+      "model": "staff"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "core",
+      "model": "systems"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "core",
+      "model": "systemimages"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "core",
+      "model": "projectsystemjoint"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "core",
+      "model": "projectstaffjoint"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "core",
+      "model": "projectimages"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "yxw7s4ap8t5hm4wzrujnwu6j2gxf1l1r",
+    "fields": {
+      "session_data": "NmZkMjBhODVjZGYzYzk3Yjg2MGRmNGI5NGFhZmNkMzEwMWVkNGYyYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiY2VjMzA3NTUxZTFhMmZjNGVmYTIwZWE4OWFmNTFkZmVhMzE4YzA4In0=",
+      "expire_date": "2019-06-20T19:33:50.272Z"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "alwahajco.com",
+      "name": "alwahaj"
+    }
+  },
+  {
+    "model": "core.company",
+    "pk": 1,
+    "fields": {
+      "name": "Vaisala",
+      "url": "https://www.vaisala.com/en"
+    }
+  },
+  {
+    "model": "core.company",
+    "pk": 2,
+    "fields": {
+      "name": "Selex-ES",
+      "url": "http://www.us.selex-es.com/"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 1,
+    "fields": {
+      "name": "Abdulameer Alanbari",
+      "position": "Chief Executive Officer",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu",
+      "education": "MSC communication",
+      "payroll": "1000.000",
+      "image": "media/staff/113634857-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 2,
+    "fields": {
+      "name": "Ali Kubba",
+      "position": "Project Manager",
+      "description": "ate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. P",
+      "education": "MS Electrical engineer",
+      "payroll": "1000.000",
+      "image": "media/staff/placeholder-male.gif"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 3,
+    "fields": {
+      "name": "Ali Muraiati",
+      "position": "Senior Accountant",
+      "description": "us. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidu",
+      "education": "BS Economy",
+      "payroll": "1000.000",
+      "image": "media/staff/male-placeholder.png"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 4,
+    "fields": {
+      "name": "Ahmed Alanbari",
+      "position": "Project Manager",
+      "description": "bus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed",
+      "education": "BS Civil Engineer",
+      "payroll": "1000.000",
+      "image": "media/staff/person-placeholder-male-5.jpg"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 5,
+    "fields": {
+      "name": "Moh Wahab",
+      "position": "Project Manager",
+      "description": "equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam n",
+      "education": "MS Chemical engineer",
+      "payroll": "1000.000",
+      "image": "media/staff/113634857-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background_8iaZnIk.jpg"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 6,
+    "fields": {
+      "name": "Mahdi Ali",
+      "position": "Project Manager",
+      "description": "dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arc",
+      "education": "BS Electrical engineer",
+      "payroll": "1000.000",
+      "image": "media/staff/placeholder-male_gngekjq.gif"
+    }
+  },
+  {
+    "model": "core.staff",
+    "pk": 7,
+    "fields": {
+      "name": "Haidar Alanbari",
+      "position": "Uknown",
+      "description": "Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempu",
+      "education": "MS computer Science",
+      "payroll": "1000.000",
+      "image": "media/staff/male-placeholder_0lElZ9l.png"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 1,
+    "fields": {
+      "name": "Relative Humidity",
+      "description": "Vaisala HUMICAP® Humidity and Temperature Probe HMP7 is designed for applications which involve constant high humidity or rapid changes in humidity such as drying and test chambers, combustion air and other humidifiers and meteorological measurements where measurement performance and chemical tolerance are essential. The HMP7 is part of the Indigo product family and compatible with Indigo 200 Series Host Devices and free Insight PC Software.",
+      "cost": "1883.000",
+      "company": 1,
+      "image": "media/systems/HMP7_INDIGO200_1280X960px.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 2,
+    "fields": {
+      "name": "Vaisala Mobile Detector MD30",
+      "description": "MD30 monitors road conditions and transmits weather data — surface surface state, grip, relative humidity, dew point and road and air temperature — from snow plows or any vehicle without disruption and works well as a standalone sensor or to help fill in data between stationary weather stations.",
+      "cost": "1500.300",
+      "company": 1,
+      "image": "media/systems/PROD-MD30-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 3,
+    "fields": {
+      "name": "Optimus™ DGA Monitor OPT100",
+      "description": "the world’s first maintenance free multi-gas DGA Monitor requiring no consumables of any kind.",
+      "cost": "10333.000",
+      "company": 1,
+      "image": "media/systems/PROD-OPT100-Optimus-1280x960-ver2.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 4,
+    "fields": {
+      "name": "CO₂ Probe GMP251",
+      "description": "The Vaisala CARBOCAP® Carbon Dioxide Probe GMP251 is an intelligent, stand-alone, %-level probe for measuring CO2 in life science incubators, cold storages, fruit and vegetable transportation, and in all demanding applications where stable and accurate percentage-level CO2 measurements are needed. The operating temperature range is -40 … +60 °C and the measurement range is 0 … 20%CO2.",
+      "cost": "12000.000",
+      "company": 1,
+      "image": "media/systems/PROD-GMP251-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 5,
+    "fields": {
+      "name": "WINDCAP® Ultrasonic Wind Sensor WMT700",
+      "description": "Robust and reliable ultrasonic anemometer for wind measurement for meteorology, aviation, maritime and wind energy applications. The WMT700 uses ultrasound to determine horizontal wind speed and direction. The measurement is based on transit time, the time it takes for the ultrasound to travel from one transducer to another, depending on the wind speed.",
+      "cost": "53323.000",
+      "company": 1,
+      "image": "media/systems/PROD-WMT700-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 6,
+    "fields": {
+      "name": "Dew Point Transmitter DMT152",
+      "description": "Designed to reliably measure low dew point - even down to below -80°C - the DMT152 is an ideal choice for the semiconductor industry as well as industrial applications, such as pure gasses, dryers, glove boxes, dry chambers, additive manufacturing and other applications where it is critical to control humidity with high accuracy.",
+      "cost": "243034.000",
+      "company": 1,
+      "image": "media/systems/PROD-DMT152-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 7,
+    "fields": {
+      "name": "Insight PC Software",
+      "description": "Calibration is needed for verifying and maintaining the measurement accuracy over time and ensuring the quality and reliability of the measurement. Vaisala Insight PC Software gives quick access to the configurations and data of Indigo family probes, such as HMP4, HMP5, HMP7 and HMP8 for measuring humidity, GMP251 and GMP252 for measuring carbon dioxide, TMP1 for measuring temperature, and the HPP270 series for measuring vaporized hydrogen peroxide, humidity and temperature.",
+      "cost": "234234324.000",
+      "company": 1,
+      "image": "media/systems/PROD-insight-PC-sw-1280x960_0.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 8,
+    "fields": {
+      "name": "viMet® FAA Certified Runway Visual Range Syst",
+      "description": "The Vaisala AviMet® PC-Based Runway Visual Range System (RVR) is the only FAA approved RVR system. It provides fully automated runway visual range assessment and reporting for airports.",
+      "cost": "234234.000",
+      "company": 1,
+      "image": "media/systems/PROD-FS11P-PWD-View-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 9,
+    "fields": {
+      "name": "Humidity and Temperature Transmitter Series H",
+      "description": "Vaisala HUMICAP® Humidity and Temperature Transmitter Series HMS110 are ideal for cooling tower control and differential enthalpy control of economizers. The HMS110 directly outputs wet-bulb temperature, enthalpy and dew-point in addition to RH and temperature. These ±2% transmitters include an integrated radiation shield to reduce the influence of solar radiation on temperature and humidity measurements and to ensure measurement accuracy in outdoor conditions.",
+      "cost": "34234.000",
+      "company": 1,
+      "image": "media/systems/PROD-HMS110-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 10,
+    "fields": {
+      "name": "Meteorological Installation Kit HMT330MIK",
+      "description": "Obtaining a true humidity reading is particularly important in e.g. fog and frost prediction and in traffic safety. The Vaisala Meteorological Installation Kit HMT330MIK enables the Vaisala HUMICAP® Humidity and Temperature Transmitter HMT337 to be installed outdoors to obtain reliable measurements for meteorological purposes. The installation kit can be ordered in a variety of configurations.",
+      "cost": "234324.000",
+      "company": 1,
+      "image": "media/systems/PROD-HMT330MIK-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 11,
+    "fields": {
+      "name": "INSTRUMENT LANDING SYSTEM",
+      "description": "Available in multiple configurations and with a wide variety of antenna arrays, the Model 2100 is field upgradeable from Category I to Category II ⁄ III to meet changing operating conditions. The Selex ES Model 2100 provides a user-friendly computer-based interface, integrates cutting- edge technical features, and combines ease of operation and maintenance with low installation, maintenance and logistics costs. With software designed and qualified to rigorous RTCA DO-178 Level B standards, the M",
+      "cost": "23423432.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_ILS_Loc_8_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 12,
+    "fields": {
+      "name": "VHF OMNI-DIRECTIONAL RANGE",
+      "description": "With systems sold and in service worldwide, the Selex ES Model 1150A VHF Omni-Directional Range (VOR) has become the international standard for high reliability en- route navigational and approach systems.",
+      "cost": "23432432.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_VOR_plane_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 13,
+    "fields": {
+      "name": "DISTANCE MEASURING EQUIPMENT",
+      "description": "With more than 1000 sold, the Selex ES Inc Model 1118A and 1119A DME have a field-proven record of performance for precision approach landing applications and are now being implemented for Area Navigation (RNAV) applications.",
+      "cost": "34545.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_DME_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 14,
+    "fields": {
+      "name": "PAR 2090C-US PRECISION APPROACH RADAR",
+      "description": "PAR 2090C-US is a coherent X-band, ground controlled Precision Approach Radar (PAR), designed to provide the detection of targets in clutter conditions, automatic tracking of at least 32 targets, control of up to 8 landing directions with automatic antennas relocation.",
+      "cost": "32432432.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_par2090c_s.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 15,
+    "fields": {
+      "name": "REMOTE MAINTENANCE AND MONITORING SYSTEM",
+      "description": "The Models 2238/2240 Remote Control Status Units (RCSU) are some of the most advanced remote control and maintenance systems available in the market today. Remote maintenance and monitoring is provided via three system types: industrial (2238), commercial (2238) and small form factor (2240).",
+      "cost": "3423423.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_ATM_Nav_RCSU_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 16,
+    "fields": {
+      "name": "DIGITAL MOBILE RADIO",
+      "description": "The Selex ES ECOS-D Digital Mobile Radio (DMR) was designed to enable a controlled migration from an existing analog or legacy, proprietary trunked network to a new digital network, while continuing to use your infrastructure investments, including the tower and shelter.  The Selex Extended COmmunications System – Digital, is a flexible and versatile technology with a software defined radio base station at the core of the solution.  Resulting in an easy to set up, easy to use, reliable communica",
+      "cost": "324324324.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_ECOS_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 17,
+    "fields": {
+      "name": "TETRA",
+      "description": "The Selex ES TETRA solution, ElettraSuite Adaptanet® TETRA IP, is the radio communications product for utilities, energy, transportation, and all business critical communications that need immediate, reliable, and secure communications whether by land, air, or sea.",
+      "cost": "34234324.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_LMR_Transport_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 18,
+    "fields": {
+      "name": "SECONDARY SURVEILLANCE RADAR",
+      "description": "Selex ES Inc’s SIR-S Secondary Surveillance Radar (SSR) is a state-of-the-art modular system designed to adhere to the highest ICAO and EUROCONTROL standards. The SIR-S is a dual-channel system with automatic changeover, solid state transmitter and receiver, and designed for unmanned operation. Single channel configurations are also available upon customer request.",
+      "cost": "324324324.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_SSR_Antenna_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 19,
+    "fields": {
+      "name": "ADS-B/MLAT",
+      "description": "The Selex ES Inc Model 3300 is a high performance Automatic Dependent Surveillance-Broadcast (ADS-B) ground station for en route, terminal and airport surveillance applications that has been designed to support both U.S. and international installations. Due to its modular design, the radio set can be configured to support both the 1090 MHz Extended Squitter (ES) and 978 MHz Universal Access Transceiver (UAT) data-links for the U.S. market (6U form factor) and can be scaled to support only the 10",
+      "cost": "32423432.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_ADS_B_MLAT_S.jpg"
+    }
+  },
+  {
+    "model": "core.systems",
+    "pk": 20,
+    "fields": {
+      "name": "INTELLIGENT TRANSPORTATION MANAGEMENT SYSTEMS",
+      "description": "Selex ES delivers a suite of components and applications to allow real time fleet management, counters and parameters acquisition, bi-directional data and voice communication between on-board computer, driver and area control center, on-board video surveillance.",
+      "cost": "324324324.000",
+      "company": 2,
+      "image": "media/systems/squared_medium_squared_original_citiesavm_s.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 1,
+    "fields": {
+      "system": 1,
+      "image": "media/systems/PROD-HMP7-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 2,
+    "fields": {
+      "system": 1,
+      "image": "media/systems/PROD-HMP7-HAND-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 3,
+    "fields": {
+      "system": 3,
+      "image": "media/systems/PROD-OPT100_red_1280x960.jfif"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 4,
+    "fields": {
+      "system": 3,
+      "image": "media/systems/PROD-VIM-OPT100-Door_open-Riverside-280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 5,
+    "fields": {
+      "system": 4,
+      "image": "media/systems/PROD-GMP251-with-Indigo_200-and-mobile-phone-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 6,
+    "fields": {
+      "system": 4,
+      "image": "media/systems/PROD-MI70-GMP252-1280x960_1.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 7,
+    "fields": {
+      "system": 5,
+      "image": "media/systems/PROD-WMT700-Upside-Down-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 8,
+    "fields": {
+      "system": 8,
+      "image": "media/systems/PROD-FS11-top-1280x960_0.jpg"
+    }
+  },
+  {
+    "model": "core.systemimages",
+    "pk": 9,
+    "fields": {
+      "system": 8,
+      "image": "media/systems/PROD-LM21-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.projects",
+    "pk": 1,
+    "fields": {
+      "name": "Weather Radar",
+      "description": "Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempu",
+      "type": "A",
+      "location": "Baghdad",
+      "beneficiary": "Baghdad international Airport",
+      "status": "Completed",
+      "budget": "32323.000",
+      "image": "media/projects/DG.RADOME-PAINTED1.jpg"
+    }
+  },
+  {
+    "model": "core.projects",
+    "pk": 2,
+    "fields": {
+      "name": "RVR + Total station",
+      "description": "i vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam",
+      "type": "B",
+      "location": "Baghdad",
+      "beneficiary": "Baghdad international Airport",
+      "status": "Completed",
+      "budget": "24234324.000",
+      "image": "media/projects/PROD-LT31-1280x960.jpg"
+    }
+  },
+  {
+    "model": "core.projects",
+    "pk": 3,
+    "fields": {
+      "name": "Weather Radar SULIMANI",
+      "description": "lputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.",
+      "type": "C",
+      "location": "SULIMANI",
+      "beneficiary": "SULIMANI international airport",
+      "status": "Completed",
+      "budget": "23324.000",
+      "image": ""
+    }
+  },
+  {
+    "model": "core.projects",
+    "pk": 4,
+    "fields": {
+      "name": "ILS",
+      "description": ", ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.",
+      "type": "D",
+      "location": "SULIMANI",
+      "beneficiary": "SULIMANI international airport",
+      "status": "Completed",
+      "budget": "34324.000",
+      "image": ""
+    }
+  },
+  {
+    "model": "core.projectimages",
+    "pk": 1,
+    "fields": {
+      "project": 1,
+      "image": "media/projects/radom3.big.jpg"
+    }
+  },
+  {
+    "model": "core.projectimages",
+    "pk": 2,
+    "fields": {
+      "project": 1,
+      "image": "media/projects/radome-862x485.jpg"
+    }
+  },
+  {
+    "model": "core.projectimages",
+    "pk": 3,
+    "fields": {
+      "project": 2,
+      "image": "media/projects/download.jfif"
+    }
+  },
+  {
+    "model": "core.projectimages",
+    "pk": 4,
+    "fields": {
+      "project": 2,
+      "image": "media/projects/images.jfif"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 1,
+    "fields": {
+      "Projects": 1,
+      "Systems": 1,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 2,
+    "fields": {
+      "Projects": 1,
+      "Systems": 4,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 3,
+    "fields": {
+      "Projects": 1,
+      "Systems": 10,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 4,
+    "fields": {
+      "Projects": 1,
+      "Systems": 13,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 5,
+    "fields": {
+      "Projects": 2,
+      "Systems": 5,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 6,
+    "fields": {
+      "Projects": 2,
+      "Systems": 1,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 7,
+    "fields": {
+      "Projects": 2,
+      "Systems": 16,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 8,
+    "fields": {
+      "Projects": 2,
+      "Systems": 7,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 9,
+    "fields": {
+      "Projects": 3,
+      "Systems": 11,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 10,
+    "fields": {
+      "Projects": 3,
+      "Systems": 15,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 11,
+    "fields": {
+      "Projects": 3,
+      "Systems": 6,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 12,
+    "fields": {
+      "Projects": 3,
+      "Systems": 14,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 13,
+    "fields": {
+      "Projects": 4,
+      "Systems": 1,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 15,
+    "fields": {
+      "Projects": 4,
+      "Systems": 5,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 16,
+    "fields": {
+      "Projects": 4,
+      "Systems": 11,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectsystemjoint",
+    "pk": 17,
+    "fields": {
+      "Projects": 4,
+      "Systems": 16,
+      "startDate": "2019-02-02",
+      "endDate": "2019-02-02"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 1,
+    "fields": {
+      "Projects": 1,
+      "Staff": 1,
+      "isLeader": "Yes"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 2,
+    "fields": {
+      "Projects": 1,
+      "Staff": 2,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 3,
+    "fields": {
+      "Projects": 1,
+      "Staff": 4,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 4,
+    "fields": {
+      "Projects": 1,
+      "Staff": 5,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 5,
+    "fields": {
+      "Projects": 2,
+      "Staff": 2,
+      "isLeader": "Yes"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 6,
+    "fields": {
+      "Projects": 2,
+      "Staff": 3,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 7,
+    "fields": {
+      "Projects": 2,
+      "Staff": 4,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 8,
+    "fields": {
+      "Projects": 3,
+      "Staff": 4,
+      "isLeader": "Yes"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 9,
+    "fields": {
+      "Projects": 3,
+      "Staff": 1,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 10,
+    "fields": {
+      "Projects": 3,
+      "Staff": 6,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 11,
+    "fields": {
+      "Projects": 3,
+      "Staff": 5,
+      "isLeader": "Yes"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 12,
+    "fields": {
+      "Projects": 3,
+      "Staff": 2,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 13,
+    "fields": {
+      "Projects": 3,
+      "Staff": 7,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 14,
+    "fields": {
+      "Projects": 4,
+      "Staff": 7,
+      "isLeader": "Yes"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 15,
+    "fields": {
+      "Projects": 4,
+      "Staff": 2,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "core.projectstaffjoint",
+    "pk": 16,
+    "fields": {
+      "Projects": 4,
+      "Staff": 3,
+      "isLeader": "No"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 1,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 1,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 1,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 1,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 2,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 2,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 2,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 2,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 3,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 3,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 3,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 3,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 4,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 4,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 4,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 4,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 5,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 5,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 5,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 5,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 6,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 6,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 6,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 6,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add email address",
+      "content_type": 7,
+      "codename": "add_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change email address",
+      "content_type": 7,
+      "codename": "change_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete email address",
+      "content_type": 7,
+      "codename": "delete_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view email address",
+      "content_type": 7,
+      "codename": "view_emailaddress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add email confirmation",
+      "content_type": 8,
+      "codename": "add_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change email confirmation",
+      "content_type": 8,
+      "codename": "change_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete email confirmation",
+      "content_type": 8,
+      "codename": "delete_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view email confirmation",
+      "content_type": 8,
+      "codename": "view_emailconfirmation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add social account",
+      "content_type": 9,
+      "codename": "add_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change social account",
+      "content_type": 9,
+      "codename": "change_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete social account",
+      "content_type": 9,
+      "codename": "delete_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view social account",
+      "content_type": 9,
+      "codename": "view_socialaccount"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add social application",
+      "content_type": 10,
+      "codename": "add_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change social application",
+      "content_type": 10,
+      "codename": "change_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete social application",
+      "content_type": 10,
+      "codename": "delete_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view social application",
+      "content_type": 10,
+      "codename": "view_socialapp"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add social application token",
+      "content_type": 11,
+      "codename": "add_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change social application token",
+      "content_type": 11,
+      "codename": "change_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete social application token",
+      "content_type": 11,
+      "codename": "delete_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view social application token",
+      "content_type": 11,
+      "codename": "view_socialtoken"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 12,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 12,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 12,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 12,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add company",
+      "content_type": 13,
+      "codename": "add_company"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change company",
+      "content_type": 13,
+      "codename": "change_company"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete company",
+      "content_type": 13,
+      "codename": "delete_company"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view company",
+      "content_type": 13,
+      "codename": "view_company"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add projects",
+      "content_type": 14,
+      "codename": "add_projects"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change projects",
+      "content_type": 14,
+      "codename": "change_projects"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete projects",
+      "content_type": 14,
+      "codename": "delete_projects"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view projects",
+      "content_type": 14,
+      "codename": "view_projects"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add staff",
+      "content_type": 15,
+      "codename": "add_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change staff",
+      "content_type": 15,
+      "codename": "change_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete staff",
+      "content_type": 15,
+      "codename": "delete_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view staff",
+      "content_type": 15,
+      "codename": "view_staff"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add systems",
+      "content_type": 16,
+      "codename": "add_systems"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change systems",
+      "content_type": 16,
+      "codename": "change_systems"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete systems",
+      "content_type": 16,
+      "codename": "delete_systems"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view systems",
+      "content_type": 16,
+      "codename": "view_systems"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add system images",
+      "content_type": 17,
+      "codename": "add_systemimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change system images",
+      "content_type": 17,
+      "codename": "change_systemimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete system images",
+      "content_type": 17,
+      "codename": "delete_systemimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view system images",
+      "content_type": 17,
+      "codename": "view_systemimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add project system joint",
+      "content_type": 18,
+      "codename": "add_projectsystemjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change project system joint",
+      "content_type": 18,
+      "codename": "change_projectsystemjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete project system joint",
+      "content_type": 18,
+      "codename": "delete_projectsystemjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view project system joint",
+      "content_type": 18,
+      "codename": "view_projectsystemjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+      "name": "Can add project staff joint",
+      "content_type": 19,
+      "codename": "add_projectstaffjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+      "name": "Can change project staff joint",
+      "content_type": 19,
+      "codename": "change_projectstaffjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+      "name": "Can delete project staff joint",
+      "content_type": 19,
+      "codename": "delete_projectstaffjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+      "name": "Can view project staff joint",
+      "content_type": 19,
+      "codename": "view_projectstaffjoint"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+      "name": "Can add project images",
+      "content_type": 20,
+      "codename": "add_projectimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+      "name": "Can change project images",
+      "content_type": 20,
+      "codename": "change_projectimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+      "name": "Can delete project images",
+      "content_type": 20,
+      "codename": "delete_projectimages"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+      "name": "Can view project images",
+      "content_type": 20,
+      "codename": "view_projectimages"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2i$v=19$m=512,t=2,p=2$SGVqWHprZ0xsM1Bn$R+0X6RdUwVAQ7bpGG9HlQA",
+      "last_login": "2019-06-06T19:33:50.259Z",
+      "is_superuser": true,
+      "username": "zxc",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-06-06T19:33:35.067Z",
+      "name": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
