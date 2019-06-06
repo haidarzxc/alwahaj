@@ -13,9 +13,9 @@ DJANGO_SECURE_SSL_REDIRECT=False
 
 # Email
 # ------------------------------------------------------------------------------
-MAILGUN_API_KEY=
-DJANGO_SERVER_EMAIL=
-MAILGUN_DOMAIN=
+#MAILGUN_API_KEY=
+#DJANGO_SERVER_EMAIL=
+#MAILGUN_DOMAIN=
 
 # django-allauth
 # ------------------------------------------------------------------------------
