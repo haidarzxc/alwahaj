@@ -1,0 +1,42 @@
+{% load static %}
+<!-- <script type="text/javascript" src="{% static 'js/loginValidation.js' %}"></script> -->
+<!-- Modal start -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel"><i class="fa fa-sign-in-alt"></i> Sign in</h5>
+        <button type="button" id="loginCrossBtn" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id='loginForm' method="post">
+        {% csrf_token %}
+      <div class="modal-body loginModalBody">
+        {% include 'pages\form.html' with form=form %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="loginCloseBtn" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+        <button type="submit" id="loginSubmitBtn" class="btn btn-primary"><i class="fa fa-check"></i> log in</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+function renderErrorMessage(msg,loc){
+  if($('.loginError').length==0){
+    $(loc).prepend('<div class="alert alert-danger loginError" role="alert">'+msg+'</div>');
+    $('.loginError').hide().delay(500).slideDown("fast");
+  }
+}//end of renderErrorMessage
+{% if invalidUser %}
+if({{invalidUser}}){
+  renderErrorMessage("<i class=\"fa fa-user-slash\"></i> Invalid username or password",'.loginModalBody');
+  $('#loginModal').modal();
+}
+{% endif %}
+</script>
+<!-- Modal end -->

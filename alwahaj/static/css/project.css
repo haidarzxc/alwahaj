@@ -1,13 +1,246 @@
-/* These styles are generated from project.scss. */
-
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
+/* wrapper  */
+#wrapper{
+  margin-top: 60px;
 }
 
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+#previewImageWrapper{
+  width:765px;
+  height: 400px;
 }
+
+.img-thumbnail{
+  max-width: none;
+}
+
+#previewImage{
+  max-width:765px;
+  max-height:395px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submitFormBtn{
+  display: none;
+}
+
+#selectImageArea{
+  width:765px;
+  overflow-x: scroll;
+}
+
+.filePicker{
+  border-style: solid;
+  border-color: #ced4da;
+  border-width: 1px;
+  border-radius: .25rem;
+}
+
+.imageRow{
+  margin-right: -24px;
+  margin-left: 1px;
+  margin-bottom: 10px;
+}
+
+.filePicker > input{
+  padding-top: 3px;
+}
+
+.addImageBtn{
+  padding: 0 !important;
+}
+
+.add-form-row, .remove-form-row{
+  width: 40px;
+}
+
+.formFildColumn{
+  padding-left: 50px;
+}
+
+.tableCheckbox{
+  font-size: 30px;
+}
+
+#projectTabsContent{
+  padding-top: 15px;
+}
+
+.projectTabATag{
+  color:#256bcc;
+}
+
+/* tableArea Start  */
+
+.adminTblHeader, .adminTblBody, .adminTblRow, .adminTblTd, .adminTblTh {
+  display: block;
+}
+
+.adminTblRow:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.adminTblHeader .adminTblTh {
+    height: 50px;
+}
+
+.adminTblBody {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.adminTblBody .adminTblTd, .adminTblHeader .adminTblTh {
+    width: 33.33%;
+    float: left;
+}
+/* tableArea End  */
+
+
+/*Footer CSS */
+#fDialogBoxLink{
+  cursor: pointer;
+}
+
+#fPromptMsg{
+  background-color:#53bc65;
+  position:absolute;
+  color:#ffffff;
+  text-align:center;
+  width:100%;
+  margin-left:-15px;
+  margin-top:-15px;
+  padding:130px;
+}
+
+#fMsgTxt{
+  resize: none;
+}
+
+#myFooter {
+    background-color: #3a3f46;
+    color: white;
+}
+#myFooter .row {
+    margin-bottom: 60px;
+}
+#myFooter .info{
+    text-align: justify;
+    color: #afb0b1;
+}
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+#myFooter .logo{
+    margin-top: 10px;
+    margin-left: 2.3rem;
+    padding-left: 0rem;
+}
+#second_bar{
+  width: 100%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+#myFooter .second-bar .logo a{
+    color:white;
+    font-size: 28px;
+    float: left;
+    font-weight: bold;
+    line-height: 68px;
+    margin: 0;
+    padding: 0;
+    padding-right: 1.5rem;
+}
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+#first_bar{
+  padding-right: 6rem;
+  padding-left: 6rem;
+  width: 100%;
+}
+#myFooter .second-bar {
+    text-align: center;
+    background-color: #33373e;
+    text-align: center;
+    padding-bottom: 70px;
+}
+#myFooter .second-bar a {
+    font-size: 22px;
+    color: #9fa3a9;
+    padding: 10px;
+    transition: 0.2s;
+    line-height: 68px;
+}
+#myFooter .second-bar a:hover {
+    text-decoration: none;
+}
+#myFooter .social-icons {
+    float:right;
+    margin-right: 2.3rem;
+}
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    #myFooter .info{
+        text-align: center;
+    }
+}
+i.sml{
+    margin: 0px;
+    float: none;
+    border:none;
+    border-width: 0px;
+}
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+#wrapper{
+   flex: 1 0 auto;
+   -webkit-flex: 1 0 auto;
+   min-height: 200px;
+   /* padding-bottom: 100px; */
+}
+#myFooter{
+   flex: 0 0 auto;
+   -webkit-flex: 0 0 auto;
+}
+/*Footer CSS */
