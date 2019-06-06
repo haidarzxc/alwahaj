@@ -6,7 +6,6 @@ DJANGO_SECRET_KEY=Y6biVBrPEQ0gBVGqD6XS2cHfroEUuMUOpEjgusa0ZOM2pS3LEg4emJXqZe6T7J
 DJANGO_ADMIN_URL=fXziD8n18nN6U8aCI7ITWAQg7dv1NqVq/
 DJANGO_ALLOWED_HOSTS=alwahaj.herokuapp.com
 
-
 # Security
 # ------------------------------------------------------------------------------
 # TIP: better off using DNS, however, redirect is OK too
