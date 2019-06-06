@@ -1,0 +1,127 @@
+<div class="modal fade" id="tableModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Images</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="previewImageWrapper">
+          <img id="previewImage" class="img-thumbnail" src="" alt="Smiley face" >
+        </div>
+
+        <div id="selectImageArea">
+          <table>
+            <tbody>
+              <tr id="imageArray">
+                <td class="{{f.project.id}} static">
+                  <img class="img-thumbnail" src="" id="" alt="Smiley face" height="100" width="150">
+                </td>
+                {% for f in ProjectImages.all %}
+                <td class="{{f.project.id}} index">
+                  <img class="img-thumbnail" src="{{f.image.url }}" alt="project" height="auto" width="150">
+
+                </td>
+                {% endfor %}
+
+                {% for f in SystemImages.all %}
+                <td class="{{f.system.id}} index">
+                  <img class="img-thumbnail" src="{{f.image.url }}" alt="system" height="auto" width="150">
+
+                </td>
+                {% endfor %}
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="tableModalDelBtn" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function renderImage(id){
+    $('#imageArray td').each(function(){
+      if(parseInt($(this).attr('class'))!=id){
+        $(this).css('display',"none");
+      }
+    })
+  }//end of renderImage
+  function unhideImages(){
+    $('#imageArray td').each(function(){
+      $(this).css('display',"");
+    })
+  }//end of unhideImages
+  // ready method
+  $(document).ready(function(){
+    // imageModal click listener
+    $('.imageModal').click(function(){
+      $('#previewImage').attr('src',$(this).attr('src'));
+      $('td.static').attr('class',$(this).attr('id')+' static');
+      $('td.static img').attr('src',$(this).attr('src'));
+
+
+      $('#tableModal .static img').attr('for',$(this).attr('id'));
+
+      renderImage($(this).attr('id'));
+      $('#tableModal').modal();
+    })//end of click imageModal
+
+    // unhide images on hide modal
+    $('#tableModal').on('hidden.bs.modal', function () {
+        unhideImages();
+    })//end of hidden listener tableModal
+
+    let currentImage=null;
+    // switch image array on click
+    $('.index,.static').click(function(){
+      currentImage=$(this);
+      $('#previewImage').attr('src',$(this).find('img').attr('src'));
+    });//end of image array switch images
+
+    $('#tableModalDelBtn').click(function(){
+      let indexObj={'csrfmiddlewaretoken': '{{ csrf_token }}',
+                    'model':"{{ request.path }}images",
+                    'row[]':$('#previewImage').attr('src')};
+
+
+      if(currentImage==null){
+        attachPopover('#tableModalDelBtn',"Select Image","Database Error");
+        showPopover('#tableModalDelBtn');
+        return ;
+      }
+      else if($(currentImage).closest('td').hasClass('static')){
+        attachPopover('#imageArray .static',"Cannot Delete Primary Image","Database Error");
+        showPopover('#imageArray .static');
+        return ;
+      }
+
+      $.ajax({
+        type: "POST",
+        url: "{% url 'delete' %}",
+        data: indexObj,
+        success: function(data){
+            $(currentImage).remove();
+            currentImage=null;
+            $('#previewImage').attr('src',$('#tableModal .static img').attr('src'));
+
+        },
+        failure: function(errMsg) {
+            alert(errMsg);
+        }
+      });
+    });//end of deleteImage
+
+
+  });//end of ready method
+
+</script>

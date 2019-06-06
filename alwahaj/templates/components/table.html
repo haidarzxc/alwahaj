@@ -1,0 +1,163 @@
+{% include 'tableModal.html'%}
+
+<table class="table table-striped">
+  <thead class="adminTblHeader">
+    <tr class="adminTblRow">
+      {% for header in tableHeader %}
+      <th class="adminTblTh" scope="col">{{header}}</th>
+      {% endfor %}
+      <th class="adminTblTh" scope="col">
+        <i class="fa fa-square tableCheckbox" id="checkbox"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="adminTblBody">
+    {% for row in company.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.name}}</td>
+        <td class="adminTblTd">{{row.url}}</td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+    {% for row in Systems.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.name}}</td>
+        <td class="adminTblTd">{{row.description}}</td>
+        <td class="adminTblTd">{{row.cost}}</td>
+        <td class="adminTblTd">{{row.company.name}}</td>
+        <td class="adminTblTd">
+          {% if row.image %}
+          <img class="imageModal" id="{{row.id}}" src="{{row.image.url }}" alt="Smiley face" height="42" width="42">
+          {% endif %}
+        </td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+    {% for row in Projects.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.name}}</td>
+        <td class="adminTblTd">{{row.description}}</td>
+        <td class="adminTblTd">{{row.type}}</td>
+        <td class="adminTblTd">{{row.location}}</td>
+        <td class="adminTblTd">{{row.beneficiary}}</td>
+        <td class="adminTblTd">{{row.status}}</td>
+        <td class="adminTblTd">{{row.budget}}</td>
+        <td class="adminTblTd">
+          {% if row.image %}
+          <img class="imageModal" id="{{row.id}}" src="{{row.image.url }}" alt="Smiley face" height="42" width="42">
+          {% endif %}
+        </td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+    {% for row in Staff.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.name}}</td>
+        <td class="adminTblTd">{{row.description}}</td>
+        <td class="adminTblTd">{{row.position}}</td>
+        <td class="adminTblTd">{{row.education}}</td>
+        <td class="adminTblTd">{{row.payroll}}</td>
+        <td class="adminTblTd">
+          {% if row.image %}
+          <img class="imageModal" id="{{row.id}}" src="{{row.image.url }}" alt="Smiley face" height="42" width="42">
+          {% endif %}
+        </td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+    {% for row in ProjectSystemJoint.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.Projects.name}}</td>
+        <td class="adminTblTd">{{row.Systems.name}}</td>
+        <td class="adminTblTd">{{row.startDate}}</td>
+        <td class="adminTblTd">{{row.endDate}}</td>
+        <td class="adminTblTd">{{row.Projects.location}}</td>
+        <td class="adminTblTd">{{row.Systems.cost}}</td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+    {% for row in ProjectStaffJoint.all %}
+      <tr class="adminTblRow">
+        <td class="adminTblTd">{{row.id}}</td>
+        <td class="adminTblTd">{{row.Projects.name}}</td>
+        <td class="adminTblTd">{{row.Staff.name}}</td>
+        <td class="adminTblTd">{{row.isLeader}}</td>
+        <td class="adminTblTd">{{row.Staff.payroll}}</td>
+        <td class="adminTblTd">{{row.Projects.beneficiary}}</td>
+        <td class="adminTblTd">{{row.Projects.budget}}</td>
+        <td class="adminTblTh" scope="col">
+          <i class="fa fa-square tableCheckbox" id="checkbox-{{row.id}}"></i>
+        </td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+
+
+
+
+<script type="text/javascript">
+  // ready method
+  $(document).ready(function(){
+    // check if table exists
+    if($('.adminTblBody').length!=0){
+      // set table height dynamically
+      $('.adminTblBody').css('height',$( window ).height()-($('#myFooter').height()/2));
+      $('.adminTblBody .adminTblTd, .adminTblHeader .adminTblTh').css('width',(100/({{tableHeader|length}}+1))+"%");
+
+      // single checkbox listener
+      $(".tableCheckbox").click(function(e){
+        let checkID="#"+$(e.target).attr('id');
+        if($(checkID).hasClass("fa-square")){
+          $(checkID).removeClass("fa-square");
+          $(checkID).addClass("fa-check-square");
+        }
+        else{
+          $(checkID).removeClass("fa-check-square");
+          $(checkID).addClass("fa-square");
+        }
+      });//end of checkbox listener
+
+      // loop over all checkboxes (select all checkbox) listener
+      $('#checkbox').click(function(){
+        if($(this).hasClass("fa-check-square")){
+          $('.adminTblBody .fa-square').each(function(){
+            $(this).removeClass('fa-square');
+            $(this).addClass('fa-check-square');
+          });
+        }//end of DO check
+        else{
+          $('.adminTblBody .fa-check-square').each(function(){
+            $(this).removeClass('fa-check-square');
+            $(this).addClass('fa-square');
+          });
+        }//end of UNDO check
+      });//end of loop over all checkboxes
+
+
+
+    }//end of adminTblBody
+  });//end of ready method
+</script>
