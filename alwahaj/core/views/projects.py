@@ -4,4 +4,4 @@ from django.http import HttpResponse
 
 def projectsView(request):
     context=dict(x=1)
-    return render(request,"project.html",context)
+    return render(request,"pages/project.html",context)

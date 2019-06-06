@@ -28,7 +28,7 @@ def addCompany(request):
     context['tableHeader']=['id','name','url']
     context['company']=Company.objects.all()
     # print(Company.objects.all())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 @login_required
 def addSystem(request):
@@ -63,7 +63,7 @@ def addSystem(request):
     context['Systems']=Systems.objects.all()
     context['SystemImages']=SystemImages.objects.all()
     # print(SystemImages.objects.all().values())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 @login_required
 def linkSystem(request):
@@ -81,7 +81,7 @@ def linkSystem(request):
     context['tableHeader']=['id','Project','System','StartDate','EndDate','Location','Cost']
     context['ProjectSystemJoint']=ProjectSystemJoint.objects.all()
     # print(Company.objects.all())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 @login_required
 def linkStaff(request):
@@ -99,7 +99,7 @@ def linkStaff(request):
     context['tableHeader']=['id','Project','Staff','leader','Payroll','beneficiary','budget']
     context['ProjectStaffJoint']=ProjectStaffJoint.objects.all()
     # print(Company.objects.all())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 @login_required
 def addProject(request):
@@ -135,7 +135,7 @@ def addProject(request):
     context['Projects']=Projects.objects.all()
     context['ProjectImages']=ProjectImages.objects.all()
     # print(ProjectImages.objects.all())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 @login_required
 def addStaff(request):
@@ -154,7 +154,7 @@ def addStaff(request):
     context['tableHeader']=['id','name','description','position','education','payroll','Image']
     context['Staff']=Staff.objects.all()
     # print(Company.objects.all())
-    return render(request,"adminSetting.html",context)
+    return render(request,"pages/adminSetting.html",context)
 
 
 def iterateDelete(array,model):
@@ -189,7 +189,7 @@ def getModel(path):
 def delete(request):
     if request.method == 'POST':
         iterateDelete(request.POST.getlist('row[]', ''),getModel(request.POST.get('model', ''))['model'])
-        return render(request,"adminSetting.html",dict())
+        return render(request,"pages/adminSetting.html",dict())
 
 
 
@@ -203,7 +203,7 @@ def update(request,key=None):
             form=result['form'](instance=instance)
             context=dict()
             context['form']=form
-            return render(request,"adminSetting.html",context)
+            return render(request,"pages/adminSetting.html",context)
 
         path=request.META.get('HTTP_REFERER').split('/')
         relativePath="/"+path[len(path)-2]+"/"

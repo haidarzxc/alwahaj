@@ -11,7 +11,7 @@
       <form action="" method="POST" id="editForm" enctype="multipart/form-data">
       <div class="modal-body">
         {% csrf_token %}
-        {% include 'form.html' with form=form %}
+        {% include 'components\form.html' with form=form %}
 
       </div>
       <div class="modal-footer">
