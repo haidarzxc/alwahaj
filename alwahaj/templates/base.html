@@ -44,7 +44,7 @@
 
   <body>
     <!-- login dialog -->
-    {% include 'pages\login.html' %}
+    {% include 'components\login.html' %}
 
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -121,7 +121,7 @@
 
     </div>
 
-    <div class="container">
+    <div id="wrapper" class="container">
 
       {% if messages %}
           {% for message in messages %}
@@ -133,7 +133,11 @@
         <p>@zxc</p>
       {% endblock content %}
 
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
+
+    <!-- footer  -->
+    {% include 'components\footer.html' %}
 
     {% block modal %}{% endblock modal %}
 
