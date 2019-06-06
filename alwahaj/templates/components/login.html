@@ -14,7 +14,7 @@
       <form id='loginForm' method="post">
         {% csrf_token %}
       <div class="modal-body loginModalBody">
-        {% include 'components\form.html' with form=form %}
+        {% include 'components/form.html' with form=form %}
       </div>
       <div class="modal-footer">
         <button type="button" id="loginCloseBtn" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
