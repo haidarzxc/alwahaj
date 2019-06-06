@@ -13,7 +13,7 @@ DJANGO_SECURE_SSL_REDIRECT=False
 
 # Email
 # ------------------------------------------------------------------------------
-#MAILGUN_API_KEY=
+SENDGRID_API_KEY=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
 #DJANGO_SERVER_EMAIL=
 #MAILGUN_DOMAIN=
 
